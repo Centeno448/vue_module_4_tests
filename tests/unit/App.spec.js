@@ -78,7 +78,7 @@ test('App.vue no muestra información de la notaActual hasta que algún boton ha
   expect(wrapper.find('p').exists()).toBe(false);
 });
 
-test('App.vue asigna la clase "active" a la nota cuándo es seleccionada | Asegúrate de que cuando la nota sea la notaActiva, su boton tenga asignado la clase "active" y el resto de los botones no', async () => {
+test('App.vue asigna la clase "active" a la nota seleccionada | Asegúrate de que cuando la nota sea la notaActiva, su botón tenga asignado la clase "active" y el resto de los botones no', async () => {
   const notas = [{ titulo: "testing 12", contenido: "Contenido 1" }, { titulo: "testing 2", contenido: "Contenido 4" }];
 
   const wrapper = shallowMount(App, {
