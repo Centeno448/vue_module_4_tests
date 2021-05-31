@@ -5,7 +5,7 @@
       <p v-if="!notas.length">No hay notas guardadas</p>
       <ul v-if="notas.length">
         <li v-for="nota in notas" v-bind:key="nota.titulo">
-          <button v-on:click="notaActual = nota">{{ nota.titulo }}</button>
+          <button v-on:click="notaActual = nota" v-bind:class= "{active: nota === notaActual}">{{ nota.titulo }}</button>
         </li>
       </ul>
     </nav>
@@ -22,7 +22,7 @@ export default {
   name: "App",
   data: function() {
     return {
-      notas: [{ titulo: "titulo", contenido: "contenido" }],
+      notas: [{ titulo: "titulo", contenido: "contenido" }, { titulo: "titulo2", contenido: "contenido2" }],
 
       notaActual: null,
     };
